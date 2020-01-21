@@ -1,0 +1,123 @@
+<!DOCTYPE>
+<html style="height: 100%;overflow: hidden;">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Building Analytics</title>
+	
+	<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+	<link rel ="stylesheet" href="/css/style.css"/>
+		<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/series-label.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js" type="text/javascript"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"
+type="text/javascript"></script>
+
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css"
+rel="Stylesheet"type="text/css"/>  
+
+<link href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css"
+    rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<link href="http://cdn.rawgit.com/davidstutz/bootstrap-multiselect/master/dist/css/bootstrap-multiselect.css"
+    rel="stylesheet" type="text/css" />
+<script src="http://cdn.rawgit.com/davidstutz/bootstrap-multiselect/master/dist/js/bootstrap-multiselect.js"
+    type="text/javascript"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body style="height: 100%;background-color:black;overflow: hidden;">
+
+<div class="col-lg-12" style="padding: 0px;height: 100%;overflow: hidden;">
+
+<!-- heading bar starts from here -->
+
+<div id="header" class="col-lg-12" style="padding:0px;background-color:	#808080;height: 8%;">
+
+<!-- nav bar -->
+	<nav class=" col-lg-7 pull-right" >
+					<ul class="nav nav-pills pull-right">
+						<li role="presentation"><a href="/" style="color: #fff">Home</a></li>
+					 
+						
+						{{# if user}}
+						 <li>
+						<div class="dropdown">
+						 <button class="dropbtn"><li role="presentation"style="color: #fff">Dashboard</a></li></button>
+						 <div class="dropdown-content">
+      						<a href="/users/about" >Sensor_Nodes</a>
+      						<a href="/users/energymeters">Energy_Meters</a>
+     					 	
+   						 	</div>
+							</div>
+						 </li>
+						 <li role="presentation"><a href="/users/anayltics" style="color: #fff">Anayltics</a></li>
+						 <li role="presentation"><a href="/users/logout" style="color: #fff">Logout</a></li>
+					 
+
+						{{else}}
+						<li role="presentation"><a href="/users/login" style="color: #fff">Login</a></li>
+						<li role="presentation"><a href="/users/register" style="color: #fff">Register</a></li>
+						{{/if}}
+
+						
+					</ul>
+				</nav>
+
+				<!-- application title -->
+				<h3 class="text-muted col-lg-5" style="margin: 0px;line-height: 2;color: #fff">
+					<b>Fault Detection in Wireless Network</b>
+				</h3>
+	
+</div>
+
+<!-- heading bar end to here -->
+
+<!-- Body statrts from here -->
+<div class="col-lg-12" style="padding: 5px;height: 87%;">
+	{{#if success_msg}}
+		<div class = "alert alert-success">{{success_msg}}</div>
+		{{/if}}
+
+		{{#if error_msg}}
+		<div class = "alert alert-danger">{{error_msg}}</div>
+		{{/if}}
+
+		{{#if error}}
+		<div class = "alert alert-danger">{{error}}</div>
+		{{/if}}
+		
+
+ {{{body}}}
+
+</div>
+
+<!-- body end to here -->
+
+<!-- footer starts from here -->
+
+<div align="bottom" class="col-lg-12" style="padding: 0px;height: 3%; display:fixed; z-index:100">
+
+<footer  class="footer" style="text-align: center;    margin: 0px;
+		padding: 0px">
+				<p style="margin-bottom: 0px;
+		line-height: 2;color: #fff;">&copy; 2019 IIT-Bombay-Electrical Department, Inc.</p>
+			</footer>
+
+</div>
+
+<!-- footer endes to here -->
+
+
+</div> 
+
+
+
+</body>
+<html>

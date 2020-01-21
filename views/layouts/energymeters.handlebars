@@ -1,0 +1,119 @@
+<!---cdn or lib for the page--->
+
+<script type="text/javascript" src="/js/energymeter.js"></script>
+   <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+<div class="col-lg-12" style="padding: 0px;height: 100%;width: 99%;margin-left: 0.5%;">
+<!-- Menu div start from here -->   
+<div class="col-lg-12" style="padding: 5px;height: 9%;border: 1px solid #ddd;color: #fff;">
+<div class="col-lg-3" style="height: 100%;padding: 0px;">
+    <div class="col-lg-3" style="height: 100%;padding: 0px;">
+    <label style="line-height: 2;">Start Date : </label>
+   </div>
+    <div class="col-lg-9" style="height: 100%;">
+        <div class="col-lg-12 form-group">
+                 <div class="input-group" >
+            <input  type="text" id="startTime1" class="form-control" >
+<!---div class="input-group-addon">
+              <span class="glyphicon glyphicon-calendar"id="calender1"></span>
+            </div>!--->
+          </div>
+            </div>
+        </div>
+    </div>
+
+<div class="col-lg-3" style="height: 100%;padding: 0px;">
+    <div class="col-lg-3" style="height: 100%;padding: 0px;">
+    <label style="line-height: 2;">End Date : </label>
+   </div>
+    <div class="col-lg-9" style="height: 100%;">
+        <div class="col-lg-12 form-group">
+                <div class='input-group'>
+                    <input type='text' id="endTime1" class="form-control" />
+                    <!---<span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar" id="calender2"></span>
+                    </span>!-->
+                </div>
+            </div>
+        </div>
+</div>
+
+<div class="col-lg-2" style="height: 100%;padding: 0px;">
+    <div class="col-lg-4" style="height: 100%;padding: 0px;">
+    <label style="line-height: 2;">Boards : </label>
+   </div>
+   <div class="col-lg-8" style="height: 200px;padding: 0px;" >
+    
+        
+  <select multiple id="Boards1" data-placeholder="select Boards" style="color: #000;">
+    
+    
+    <option value="109">109</option>
+    <option value="122">122</option>
+    <option value="124">124</option>
+    <option value="125">125</option>
+    <option value="127">127</option>
+    <option value="128">128</option>
+    <option value="129">129</option>
+    
+  </select>
+</div>
+
+
+</div>
+<div class="col-lg-2" style="height: 100%;padding: 0px;">
+    <div class="col-lg-4" style="height: 100%;padding: 0px;">
+    <label style="line-height: 2;">Locations:</label>
+   </div>
+   <div class="col-lg-8" style="height: 100%;padding: 0px;" >
+    <select name="Locations" style="width: 80%;height: 30px;color: black;">
+    
+    <option value="Board-1" style="color: black">Location-1</option>
+    <option value="Board-2" style="color: black">Location-2</option>
+    <option value="Board-3" style="color: black">Location-3</option>
+  </select>
+</div>
+
+</div>
+
+<div class="col-lg-1" style="height: 100%;padding: 0px;">
+    <button onclick="filteredTableData();">Go</button>
+</div>
+
+</div>
+<!-- MENU div end here -->
+
+<!-- content Div Start from here -->
+
+<div class="col-lg-12"  style="padding: 5px;height: 91.5%;margin-top: 0.3%;border: 1px solid #ddd;overflow-y: scroll;color: #fff;">
+	<!-- Table start from here -->
+<table id="tableContent" border="1" style="width: 100%;color: #fff;text-align: center;overflow-y: scroll;">
+    <thead>
+        <tr style="background-color: #052354;text-align:center;">
+            <th style="text-align: center;">Date</th>
+            <th style="text-align: center;">Time</th>
+            <th style="text-align: center;">TimeStamp</th>
+            <th style="text-align: center;">Box_ID</th>
+            <th style="text-align: center;">Active_Power</th>
+           
+           
+        </tr>
+    </thead>
+    <tbody id="tBody">
+        
+    </tbody>
+
+</table>
+<!-- Table end to here -->
+<div class="col-lg-12" id="container" style="padding: 5px;"></div>
+<div class="col-lg-12" id="container1" style="padding: 5px;"></div>
+<div class="col-lg-12" id="container2" style="padding: 5px;"></div> 
+</div>
+</div>
+
+<!--Content Div end to here -->
+
+

@@ -1,0 +1,36 @@
+{
+  "name": "building_analytics",
+  "version": "1.0.0",
+  "description": "Analysis Application",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mrudula B",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "*",
+    "body-parser": "*",
+    "chart.js": "^2.7.3",
+    "connect-flash": "*",
+    "cookie-parser": "^1.4.1",
+    "cors": "^2.8.5",
+    "ejs": "^2.6.1",
+    "express": "*",
+    "express-handlebars": "*",
+    "express-messages": "*",
+    "express-session": "*",
+    "express-validator": "*",
+    "highcharts": "^7.0.3",
+    "highcharts-export-server": "^2.0.16",
+    "jquery": "^3.4.1",
+    "mongodb": "*",
+    "mongoose": "*",
+    "nodemailer": "^6.1.0",
+    "nodemon": "^2.0.2",
+    "passport": "*",
+    "passport-http": "*",
+    "passport-local": "*",
+    "request": "^2.88.0"
+  }
+}
