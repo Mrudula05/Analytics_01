@@ -126,4 +126,61 @@ var filteredData1 = [];
     b_data.push(boxid);
     AP_data.push(activepower);
  
+ /*Code for container chart*/
+
+      Highcharts.chart('container', {
+                    chart:{
+                        zoomType: 'xy'
+                    },
+
+    title: {
+        text: 'Energy_Meter_Data'
+    },
+    yAxis: {
+          
+        title: {
+            text: 'Active_power'
+        }
+    },
+    xAxis: {
+         categories:  date_data,
+        
+            title: {
+                text: 'Date',
+
+            },
+    },
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle'
+    },
+    series: [{
+        name: 'Active_power',
+        data: ap_data
+    }],
+
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 500
+            },
+            chartOptions: {
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom'
+                }
+            }
+        }]
+    }
+
+});
+
+      /*Container chart end to here*/
+ 
 }
+}
+
+ 
+
