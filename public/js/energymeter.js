@@ -128,7 +128,7 @@ var filteredData1 = [];
  
  /*Code for container chart*/
 
-      Highcharts.chart('container', {
+      Highcharts.chart('container30', {
                     chart:{
                         zoomType: 'xy'
                     },
