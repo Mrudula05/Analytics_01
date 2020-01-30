@@ -114,21 +114,31 @@ var filteredData1 = [];
       var time_data=[]; 
       var date_data=[];
       var b_data=[];
-      var AP_data=[];
+      var ap_data=[];
+
+
+
+  for (var i =0;i < filteredData1.length; i++)
+  {
+
 
     var tim = filteredData1[i].Time;
     var dates = filteredData1[i].Date;
     var boxid = filteredData1[i].Box_Id;
-    var activepower = filteredData1[i].Active_Power;
+    var activepower = parseFloat(filteredData1[i].Active_Power);
+
 
     time_data.push(tim);
     date_data.push(dates);
     b_data.push(boxid);
-    AP_data.push(activepower);
- 
- /*Code for container chart*/
+    ap_data.push(activepower);
 
-      Highcharts.chart('container30', {
+    
+    
+
+      /*Code for container chart*/
+
+      Highcharts.chart('container', {
                     chart:{
                         zoomType: 'xy'
                     },
@@ -181,6 +191,3 @@ var filteredData1 = [];
  
 }
 }
-
- 
-
