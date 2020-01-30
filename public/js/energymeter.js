@@ -11,7 +11,7 @@ $(document).ready(function () {
                dateFormat:"mm/d/yy",
                showAnim: "slide",
     onSelect: function abc() {
-    minDate = j( "#startTime" ).datepicker("getDate");
+    minDate = j( "#startTime1" ).datepicker("getDate");
     var mDate = new Date(minDate.setDate(minDate.getDate()));
     maxDate = new Date(minDate.setDate(minDate.getDate() + 30));
 j("#endTime1").datepicker("setDate", maxDate);
