@@ -8,7 +8,7 @@ $(document).ready(function () {
     var j = jQuery.noConflict();
     j( "#startTime" ).datepicker({
                showWeek:true,
-               dateFormat:"mm/d/yy",
+               dateFormat:"mm/dd/yy",
                showAnim: "slide",
     onSelect: function abc() {
     minDate = j( "#startTime" ).datepicker("getDate");
